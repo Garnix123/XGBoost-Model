@@ -1,36 +1,34 @@
-✈️ XGBoost Classification Model – Airline Customer Satisfaction
-📌 Overview
-This project demonstrates how to build and evaluate an XGBoost classification model to predict airline passenger satisfaction. It builds on prior work with decision trees and random forests, allowing direct comparison of all three models to identify the best-performing approach.
+# ✈️ XGBoost Classification Model – Airline Customer Satisfaction
 
-By completing this project, I’ve deepened my practical skills in:
+## 📍 Project Overview
+This project builds an **XGBoost classification model** to predict airline passenger satisfaction.  
+It extends previous work using decision trees and random forests on the same dataset, allowing direct performance comparison and feature analysis.
 
-Data preprocessing and feature engineering
+By doing this, I demonstrate practical skills in:
+- Data preprocessing and analysis
+- Model training, hyperparameter tuning, and evaluation
+- Feature importance analysis to interpret model results
 
-Training and tuning an XGBoost classifier
+---
 
-Evaluating model performance
+## 📂 Dataset
+- **Invistico_Airline.csv** – includes passenger demographics, flight details, and service ratings.
+- Target variable: `satisfaction` (Satisfied / Neutral or Dissatisfied).
 
-Analyzing feature importance to understand key drivers of customer satisfaction
+---
 
-⚙️ Technologies & Libraries
-Python
+## ⚙️ Technologies & Libraries
+- Python
+- pandas, numpy, matplotlib
+- scikit-learn
+- XGBoost
 
-Pandas, NumPy, Matplotlib – data analysis & visualization
+---
 
-Scikit-learn – train/test split, model tuning, evaluation metrics
+## 🧰 Project Steps
 
-XGBoost – powerful gradient boosting classifier
-
-📊 Dataset
-The model uses Invistico_Airline.csv, which contains detailed passenger data, including service ratings and demographic information.
-Key target: satisfaction (satisfied vs. dissatisfied).
-
-✅ Steps
-Import libraries
-
-python
-Zkopírovat
-Upravit
+### 1️⃣ Import libraries
+```python
 import numpy as np
 import pandas as pd
 import matplotlib as plt
@@ -40,16 +38,56 @@ from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn import metrics
 
 from xgboost import XGBClassifier, plot_importance
-Load data
-
+2️⃣ Load data
 python
 Zkopírovat
 Upravit
 airline_data = pd.read_csv('Invistico_Airline.csv', error_bad_lines=False)
-Preprocess data (cleaning, encoding, splitting)
+3️⃣ Build & tune model
+Train an XGBoost classifier.
 
-Train and tune the XGBoost classifier
+Use GridSearchCV to tune hyperparameters.
 
-Evaluate performance and compare with decision tree & random forest models
+Evaluate using accuracy, precision, recall, and ROC-AUC.
 
-Analyze feature importance to identify key factors affecting satisfaction
+4️⃣ Compare models
+Compare XGBoost with previous decision tree and random forest models.
+
+Choose the best-performing model.
+
+5️⃣ Analyze feature importance
+Identify which features most strongly influence passenger satisfaction.
+
+✅ Results
+The project concludes with:
+
+A tuned XGBoost model with improved predictive performance.
+
+Insights into the top features affecting customer satisfaction.
+
+A clear comparison of XGBoost vs. decision tree and random forest models.
+
+📌 Purpose
+This project strengthens my applied machine learning skills and helps illustrate my ability to:
+
+Build, tune, and evaluate advanced tree-based models.
+
+Interpret and communicate model results for business decision-making.
+
+⚡ This project was built as part of an ongoing exploration of tree-based models and boosting techniques in machine learning.
+
+yaml
+Zkopírovat
+Upravit
+
+---
+
+✅ **Tip:**  
+- Add a section at the end if you include visuals: confusion matrix, ROC curve, or feature importance plots.
+- Use the GitHub preview to make sure formatting looks clean.
+
+If you'd like, I can also make:
+- A **short summary for LinkedIn**
+- A **version with badges, usage instructions, and setup** for even more professional look.  
+
+Let me know!
